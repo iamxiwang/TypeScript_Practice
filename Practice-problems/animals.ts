@@ -3,21 +3,21 @@ import { dog, cat, bird, pigeon, anyAnimal } from "./animals_data";
 // Part 1: Remove the errors in the function below by filling the conditions of the if statements on lines 6, 13, and 20
 function classifyAnimal(animal: anyAnimal) {
 
-    if () {
+    if ('barks' in animal) {
 
         animal.barks
         console.log('This is a dog')
         return
     }
 
-    if () {
+    if ('coos' in animal) {
 
         animal.coos
         console.log('This is a pigeon')
         return
     }
 
-    if () {
+    if ('meows' in animal) {
 
         animal.meows
         console.log('This is a cat')

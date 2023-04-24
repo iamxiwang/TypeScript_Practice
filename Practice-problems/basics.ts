@@ -41,7 +41,7 @@ console.log("isPublic",isPublic)  //isPublic true
 // -----------------------------------------------------------------------------------------------------
 // let set = new Set()
 /*--------------------write code here--------------------*/
-let set = new Set<any>()
+let set = new Set()
 
 
 
