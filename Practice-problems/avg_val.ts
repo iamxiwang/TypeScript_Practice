@@ -14,7 +14,15 @@
 
 /*------------------------------------------write code here-----------------------------------------------*/
 
+const avgVal = (arr:Array<number>):number | null =>{
+    let sum:number= 0;
+    if(!(arr.length)) return 0;
+    for(let i:number=0; i<arr.length; i++){
+        sum += arr[i];
 
+    }
+    return sum/arr.length
+}
 
 
 
@@ -22,6 +30,6 @@
 
 // -----------------------------------------Uncomment testcases-------------------------------------------------------
 
-// console.log(avgVal([5, 10])); // 7.5
-// console.log(avgVal([3, 7, 2, 1, 2])); // 3
-// console.log(avgVal([])); // 0
+console.log(avgVal([5, 10])); // 7.5
+console.log(avgVal([3, 7, 2, 1, 2])); // 3
+console.log(avgVal([])); // 0

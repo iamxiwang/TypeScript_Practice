@@ -28,12 +28,30 @@
 /*------------------------------------------write code here-----------------------------------------------*/
 
 
-
+var isValid = function(s:string) { //"()[]{}")
+        let pair:{[key:string]:string}={"(":")", "{":"}", "[":"]"}
+        let stack:string[] = []
+        for(let i=0; i< s.length; i++){
+            if(s[i] in pair){
+                stack.push(s[i])
+            }else{
+                if (!stack){
+                    return false
+                }
+                else if(pair[stack[stack.length - 1]] !== s[i]){
+                    return false
+                }else{
+                    stack.pop()
+                }
+            }
+        }
+        return stack.length === 0
+    };
 
 
 
 // -----------------------------------------Uncomment testcases-------------------------------------------------------
 
-// console.log(isValid("()")) //true
-// console.log(isValid("()[]{}")) //true
-// console.log(isValid("(]")) //false
+console.log(isValid("()")) //true
+console.log(isValid("()[]{}")) //true
+console.log(isValid("(]")) //false

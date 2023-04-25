@@ -174,9 +174,9 @@ console.log(print1("Max"))   //Hello Max
 /*--------------------write code here--------------------*/
 
 class Cat{
-       name:string;
-       age:number;
-       color:string
+       public name:string;
+       public age:number;
+       public color:string
        constructor(name:string,age:number,color:string){
               this.name = name
               this.age = age

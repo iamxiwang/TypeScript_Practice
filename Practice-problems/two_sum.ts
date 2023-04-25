@@ -19,7 +19,21 @@
 // };
 
 /*------------------------------------------write code here-----------------------------------------------*/
+//index signiture
+var twoSum = function(nums:number[], target:number) {
+    let found:{[key:number]:number} = {}
 
+    for(let i=0; i<nums.length; i++){
+            let diff = target - nums[i]
+
+            if(diff in found){
+                return true
+            }else{
+                found[nums[i]] = i
+            }
+    }
+    return false
+};
 
 
 
@@ -27,7 +41,7 @@
 
 
 // -----------------------------------------Uncomment testcases-------------------------------------------------------
-// console.log(twoSum([1, 7, 3, 0, 2], 5)); // true
-// console.log(twoSum([1, 7, 3, 0, 2], 6)); // false
-// console.log(twoSum([4, 6, 2, 3], 8)); // true
-// console.log(twoSum([4, 6, 2, 3], 11)); // false
+console.log(twoSum([1, 7, 3, 0, 2], 5)); // true
+console.log(twoSum([1, 7, 3, 0, 2], 6)); // false
+console.log(twoSum([4, 6, 2, 3], 8)); // true
+console.log(twoSum([4, 6, 2, 3], 11)); // false
