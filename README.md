@@ -8,5 +8,13 @@ Command to compile ts and run javascript code - ts-node filename.ts<br />
 
 If you want to keep your TypeScript code and Javascript code separate, put all your typescript files in the "src" folder and then configure tsConfig.json.
 
+"outDir" : "./build"  can be anyname such as dist /build/result
+"rootDir" :"./src"
+
+Compile all .ts file under src file to .js file command line: tsc
+Compile one .ts file to build directory to .js file command line: tsc filename.ts --outDir ./build
+
+
 When you complete all other practice problems, you can find further practice here: https://typescript-exercises.github.io/
 Many of the exercises from this repository will require that you do further research
+
